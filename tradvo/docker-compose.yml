@@ -32,7 +32,10 @@ services:
 
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: >
+      sh -c "python manage.py makemigrations &&
+      python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
     ports:
@@ -52,7 +55,7 @@ services:
 
   celery:
     build: .
-    command: celery -A your_project_name worker --loglevel=info
+    command: celery -A tradvo worker --loglevel=info
     volumes:
       - .:/app
     depends_on:
@@ -60,4 +63,16 @@ services:
         condition: service_healthy
     environment:
       CELERY_BROKER_URL: redis://redis:6379/0
-      CELERY_RESULT_BACKEND: redis://redis:6379/0    
+      CELERY_RESULT_BACKEND: redis://redis:6379/0 
+
+  appium:
+    image: appium/appium:latest
+    ports:
+      - "4723:4723"
+    volumes:
+      - appium_data:/root/.appium
+    environment:
+      APPIUM_LOG_LEVEL: info 
+
+volumes:
+  appium_data:            

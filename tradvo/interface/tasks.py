@@ -84,34 +84,6 @@ def run_appium_task(request, pk):
     else: 
             print("No device name available.")
     
-    def start_appium_server():
-        try:
-            # Start the server
-            appium_process = subprocess.Popen(['appium'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-            
-            # Wait for the server to start
-            time.sleep(5)  # Adjust this time based on how long Appium takes to start on your system
-
-            # Check the logs to see if the server started successfully
-            stdout, stderr = appium_process.communicate(timeout=10)
-            
-            # Look for a successful startup message in the logs
-            if "Appium REST http interface listener started" in stdout or "Appium REST http interface listener started" in stderr:
-                print("Appium server started successfully.")
-            else:
-                print("Failed to start the Appium server.")
-                print(f"Error output: {stderr}")
-            
-        except subprocess.TimeoutExpired:
-            print("Appium server startup timed out.")
-            appium_process.kill()  # Ensure the process is terminated if it exceeds the timeout
-        except Exception as e:
-            print(f"Error starting the Appium server: {e}")
-            
-        return appium_process
-
-    
-    appium_server_process=start_appium_server()
     
     desired_caps = {
         'platformName': 'Android',
@@ -206,6 +178,4 @@ def run_appium_task(request, pk):
     
     starting_emu.kill()
     
-    appium_server_process.kill()
     return ('apk_details')
-

@@ -65,3 +65,5 @@ Pipfile.lock
 
 # docker-compose overrides
 docker-compose.override.yml
+tradvo/data/db/
+*.sock
