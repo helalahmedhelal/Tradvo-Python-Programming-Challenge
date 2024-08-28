@@ -1,0 +1,56 @@
+
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "Counter Application" %}</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .counter {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{% trans "Wait for the Appium test to finish" %}</h1>
+        <h1>{% trans "You will be redirected to app details after the test finishes" %}</h1>
+        <div class="counter" id="counter">0</div>
+    </div>
+
+    <script>
+        let count = 0;
+        const counterElement = document.getElementById('counter');
+
+        function updateCounter() {
+            count++;
+            counterElement.textContent = count;
+        }
+
+        setInterval(updateCounter, 1000);
+    </script>
+</body>
+</html>

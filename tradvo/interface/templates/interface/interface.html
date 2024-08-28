@@ -1,0 +1,52 @@
+
+{% extends "./base.html" %}
+
+{% load static %}
+
+{% load i18n %}
+
+{% block content %}
+
+
+    <!-- Introduction section -->
+  
+    <section class="py-4 text-center container">
+
+        <div class="row py-lg-5">
+        
+            <div class="col-lg-6 col-md-8 mx-auto">
+                
+
+                <h4>{% trans "Simplicity at its finest." %}</h4>
+
+
+                <br>
+                
+
+                
+
+                <br>
+                {% if user.is_authenticated %}
+                <!-- Translate the button text -->
+                <a href="{% url 'apk_list' %}" class="btn btn-primary my-2">{% trans "Your Uploaded Apps" %}</a>
+                {% else %}
+                <!-- Translate the button text -->
+                <a href="{% url 'register' %}" class="btn btn-primary my-2">{% trans "Create an account" %}</a>
+                {% endif %}
+                
+            </div>
+        
+        </div>
+
+    
+    </section>
+
+
+
+{% endblock %}
+
+
+
+
+
+

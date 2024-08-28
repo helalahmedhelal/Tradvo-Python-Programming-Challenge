@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-25 06:51+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\account\forms.py:16 .\account\forms.py:45 .\account\forms.py:72
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: .\account\forms.py:17 .\account\forms.py:73
+msgid "Email"
+msgstr "E-mail"
+
+#: .\account\forms.py:18 .\account\forms.py:49
+msgid "Password"
+msgstr "Mot de passe"
+
+#: .\account\forms.py:19
+msgid "Confirm Password"
+msgstr "Confirmez le mot de passe"
+
+#: .\account\forms.py:31
+msgid "This email is invalid"
+msgstr "Cet email n'est pas valide"
+
+#: .\account\forms.py:37
+msgid "Your email is too long"
+msgstr "Votre email est trop long"
+
+#: .\account\templates\account\login.html:35
+msgid "Login to your account"
+msgstr "Connectez-vous à votre compte"
+
+#: .\account\templates\account\login.html:56
+#: .\interface\templates\interface\base.html:94
+msgid "Login"
+msgstr "Se connecter"
+
+#: .\account\templates\account\login.html:64
+msgid "Don't have an account?"
+msgstr "Vous n'avez pas de compte ?"
+
+#: .\account\templates\account\profile\profile.html:17
+msgid "Update your account"
+msgstr "Mettez à jour votre compte"
+
+#: .\account\templates\account\profile\profile.html:28
+msgid "Update"
+msgstr "Mise à jour"
+
+#: .\account\templates\account\registration\register.html:36
+msgid "Create your account"
+msgstr "Créez votre compte"
+
+#: .\account\templates\account\registration\register.html:65
+msgid "Create account"
+msgstr "Créer un compte"
+
+#: .\account\templates\account\registration\register.html:71
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte ?"
+
+#: .\interface\forms.py:13
+msgid "App Name"
+msgstr "Nom de l'application"
+
+#: .\interface\forms.py:14
+msgid "APK File"
+msgstr "Fichier APK"
+
+#: .\interface\forms.py:15 .\interface\models.py:9
+#: .\interface\templates\interface\uploadedapks\apk_details.html:32
+msgid "First Screen Screenshot"
+msgstr "Capture d'écran du premier écran"
+
+#: .\interface\forms.py:16 .\interface\models.py:10
+#: .\interface\templates\interface\uploadedapks\apk_details.html:39
+msgid "Second Screen Screenshot"
+msgstr "Capture d'écran du deuxième écran"
+
+#: .\interface\forms.py:17
+msgid "Video Recording"
+msgstr "Enregistrement vidéo"
+
+#: .\interface\forms.py:18 .\interface\models.py:12
+msgid "UI Hierarchy"
+msgstr "Hiérarchie de l'interface utilisateur"
+
+#: .\interface\forms.py:19 .\interface\models.py:13
+msgid "Screen Changed"
+msgstr "Écran modifié"
+
+#: .\interface\forms.py:23
+msgid "Enter the name of the app."
+msgstr "Entrez le nom de l'application."
+
+#: .\interface\forms.py:24
+msgid "Upload the APK file."
+msgstr "Téléchargez le fichier APK."
+
+#: .\interface\forms.py:25
+msgid "Upload a screenshot of the first screen."
+msgstr "Téléchargez une capture d'écran du premier écran."
+
+#: .\interface\forms.py:26
+msgid "Upload a screenshot of the second screen."
+msgstr "Téléchargez une capture d'écran du deuxième écran."
+
+#: .\interface\forms.py:27
+msgid "Upload a video recording."
+msgstr "Téléchargez un enregistrement vidéo."
+
+#: .\interface\forms.py:28
+msgid "Upload the UI hierarchy file."
+msgstr "Téléchargez le fichier de hiérarchie de l'interface utilisateur."
+
+#: .\interface\forms.py:29
+msgid "Indicate if the screen has changed."
+msgstr "Indiquez si l'écran a changé."
+
+#: .\interface\models.py:6
+msgid "Name"
+msgstr "Nom"
+
+#: .\interface\models.py:7
+msgid "Uploaded by"
+msgstr "Téléchargé par"
+
+#: .\interface\models.py:8
+msgid "APK File Path"
+msgstr "Chemin du fichier APK"
+
+#: .\interface\models.py:11
+msgid "Video Recording Path"
+msgstr "Chemin d'enregistrement vidéo"
+
+#: .\interface\models.py:14
+msgid "Created At"
+msgstr "Créé à"
+
+#: .\interface\models.py:15
+msgid "Updated At"
+msgstr "Mis à jour à"
+
+#: .\interface\templates\interface\base.html:38
+#: .\interface\templates\interface\base.html:45
+msgid "Tradvo Challenge"
+msgstr "Défi Travo"
+
+#: .\interface\templates\interface\base.html:79
+msgid "Profile"
+msgstr "Profil"
+
+#: .\interface\templates\interface\base.html:85
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: .\interface\templates\interface\base.html:100
+msgid "Register"
+msgstr "Registre"
+
+#: .\interface\templates\interface\interface.html:20
+msgid "Simplicity at its finest."
+msgstr "La simplicité à son meilleur."
+
+#: .\interface\templates\interface\interface.html:31
+msgid "Your Uploaded Apps"
+msgstr "Vos applications téléchargées"
+
+#: .\interface\templates\interface\interface.html:34
+msgid "Create an account"
+msgstr "Créer un compte"
+
+#: .\interface\templates\interface\uploadedapks\apk_add.html:35
+#: .\interface\templates\interface\uploadedapks\apk_add.html:83
+msgid "Add New APK"
+msgstr "Ajouter un nouvel APK"
+
+#: .\interface\templates\interface\uploadedapks\apk_delete.html:35
+#: .\interface\templates\interface\uploadedapks\apk_delete.html:50
+#: .\interface\templates\interface\uploadedapks\apk_details.html:71
+msgid "Delete App"
+msgstr "Supprimer l'application"
+
+#: .\interface\templates\interface\uploadedapks\apk_delete.html:45
+msgid "Are you sure you want to delete"
+msgstr "Etes-vous sûr de vouloir supprimer"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:15
+#: .\interface\templates\interface\uploadedapks\apk_list.html:45
+msgid "App Details"
+msgstr "Détails de l'application"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:22
+msgid "Uploaded by:"
+msgstr "Téléchargé par :"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:23
+msgid "Created At:"
+msgstr "Créé à :"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:24
+msgid "Updated At:"
+msgstr "Mis à jour à :"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:27
+msgid "Download APK"
+msgstr "Télécharger l'APK"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:30
+msgid "first screen screenshot"
+msgstr "capture d'écran du premier écran"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:37
+msgid "second screen screenshot"
+msgstr "Capture d'écran du deuxième écran"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:47
+msgid "Your browser does not support the video tag."
+msgstr "Votre navigateur ne prend pas en charge la balise vidéo."
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:54
+#: .\interface\templates\interface\uploadedapks\apk_details.html:56
+msgid "ui_hierarchy"
+msgstr "ui_hiérarchie"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:59
+msgid "Download UI Hierarchy"
+msgstr "Télécharger la hiérarchie de l'interface utilisateur"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:63
+msgid "Screen Changed:"
+msgstr "Écran modifié :"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:63
+msgid "Yes,No"
+msgstr "Oui, non"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:67
+msgid "Udate App"
+msgstr "Mettre à jour l'application"
+
+#: .\interface\templates\interface\uploadedapks\apk_details.html:68
+msgid "Run Appium Test"
+msgstr "Exécuter le test Appium"
+
+#: .\interface\templates\interface\uploadedapks\apk_list.html:19
+msgid "App's List"
+msgstr "Liste des applications"
+
+#: .\interface\templates\interface\uploadedapks\apk_list.html:29
+msgid "Add New App"
+msgstr "Ajouter une nouvelle application"
+
+#: .\interface\templates\interface\uploadedapks\apk_list.html:40
+msgid "App screenshot"
+msgstr "Capture d'écran de l'application"
+
+#: .\interface\templates\interface\uploadedapks\apk_list.html:52
+msgid "You don't have APKs yet!"
+msgstr "Vous n'avez pas encore d'APK !"
+
+#: .\interface\templates\interface\uploadedapks\apk_update.html:17
+#: .\interface\templates\interface\uploadedapks\apk_update.html:46
+msgid "Update APK"
+msgstr "Mettre à jour l'APK"
+
+#: .\tradvo\settings.py:134
+msgid "English"
+msgstr "Anglaise"
+
+#: .\tradvo\settings.py:135
+msgid "French"
+msgstr "Français"

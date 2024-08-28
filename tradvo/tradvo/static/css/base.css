@@ -1,0 +1,38 @@
+/* Center the form horizontally and vertically in the navbar */
+.navbar-language-form {
+    display: flex;
+    align-items: center;  /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the select dropdown */
+.navbar-language-form select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #e2c2c2;
+    font-size: 14px;
+    background-color: #a7d0fa;
+    cursor: pointer;
+}
+
+/* Additional style to remove default select appearance (optional) */
+.navbar-language-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    padding-right: 20px;
+}
+
+/* Optional: style for the form in responsive mode */
+@media (max-width: 768px) {
+    .navbar-language-form {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

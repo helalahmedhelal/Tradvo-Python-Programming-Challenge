@@ -1,0 +1,77 @@
+{% include "interface/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "App Details" %}</title>
+    <link rel="stylesheet" href="{% static 'css/app_data.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>{{ app_data.name|safe }}</h1>
+    <p><strong>{% trans "Uploaded by:" %}</strong> {{ app_data.uploaded_by.username }}</p>
+    <p><strong>{% trans "Created At:" %}</strong> {{ app_data.created_at|date:"d M Y H:i"}}</p>
+    <p><strong>{% trans "Updated At:" %}</strong> {{ app_data.updated_at|date:"d M Y H:i" }}</p>
+
+    <div class="file-links">
+        <a href="{{ app_data.apk_file_path.url }}" download>{% trans "Download APK" %}</a>
+
+        {% if app_data.first_screen_screenshot_path %}
+           <p><strong>{% trans "first screen screenshot" %}</strong></p>
+            <div class="screenshot">
+                <img src="{{ app_data.first_screen_screenshot_path.url }}" alt="{% trans 'First Screen Screenshot' %}">
+            </div>
+        {% endif %}
+
+        {% if app_data.second_screen_screenshot_path %}
+            <p><strong>{% trans "second screen screenshot" %}</strong></p>
+            <div class="screenshot">
+                <img src="{{ app_data.second_screen_screenshot_path.url }}" alt="{% trans 'Second Screen Screenshot' %}">
+            </div>
+        {% endif %}
+
+        {% if app_data.video_recording_path %}
+            <div class="video">
+                <video controls>
+                    <source src="{{ app_data.video_recording_path.url }}" type="video/mp4">
+                    {% trans "Your browser does not support the video tag." %}
+                </video>
+            </div>
+        {% endif %}
+
+
+        {% if app_data.ui_hierarchy %}
+            <p><strong>{% trans "ui_hierarchy" %}</strong></p>
+            <div class="screenshot">
+                <img src="{{ app_data.ui_hierarchy.url }}" alt="{% trans 'ui_hierarchy' %}">
+            </div>
+        
+            <a href="{{ app_data.ui_hierarchy.url }}" download>{% trans "Download UI Hierarchy" %}</a>
+        {% endif %}
+    </div>
+
+    <p><strong>{% trans "Screen Changed:" %}</strong> {{ app_data.screen_changed|yesno:_("Yes,No") }}</p>
+
+    <!-- Add Buttons -->
+    <div class="action-buttons">
+        <a href="{% url 'apk_update' app_data.pk %}" class="run-button">{% trans "Udate App" %}</a>
+        <a href="{% url 'run_appium' app_data.pk %}" id="run-appium-test" class="run-button">{% trans "Run Appium Test" %}</a>
+        <a href="{% url 'apk_delete' app_data.pk %}" class="delete-button">{% trans "Delete App" %}</a>
+    </div>
+
+</div>
+
+<script src="{% static 'js/app_data.js' %}"></script>
+</body>
+</html>
+{% endblock %}

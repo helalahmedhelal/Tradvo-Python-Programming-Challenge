@@ -1,0 +1,72 @@
+{% include "interface/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% trans "App's List" %}</title>
+  <!-- Linking SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+
+<body>
+
+  <div class="centered-container">
+    <a href="{% url 'apk_add' %}">{% trans 'Add New App' %}</a>
+  </div>
+
+
+  <div class="container-swiper">
+    <div class="slider-wrapper">
+      <div class="card-list swiper-wrapper">
+        {% if apks %}
+          {% for apk in apks %}
+            <div class="card-item swiper-slide">
+              {% if apk.first_screen_screenshot_path %}
+                <img src="{{ apk.first_screen_screenshot_path.url }}" alt="{% trans 'App screenshot' %}" class="user-image">
+              {% endif %}
+              <h2 class="user-name">{{ apk.name }}</h2>
+              <p class="user-profession">{{ apk.created_at }}</p>
+              <a href="{% url 'apk_details' apk.pk %}">
+                <button class="message-button">{% trans 'App Details' %}</button>
+              </a>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="centered-message-container">
+            <div class="centered-message">
+              <h2>{% trans "You don't have APKs yet!" %}</h2>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+  </div>
+
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Linking custom script -->
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+{% endblock %}
