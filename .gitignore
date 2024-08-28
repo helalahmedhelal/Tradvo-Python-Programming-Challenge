@@ -67,3 +67,4 @@ Pipfile.lock
 docker-compose.override.yml
 tradvo/data/db/
 *.sock
+tradvo/data/db/mysql.sock
